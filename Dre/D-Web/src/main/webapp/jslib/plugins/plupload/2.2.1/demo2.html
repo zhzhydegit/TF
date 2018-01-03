@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ext上传demo</title>
+
+<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css" type="text/css"/>
+<script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+<script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+
+
+<link rel="stylesheet" href="jquery.ui.plupload/css/jquery.ui.plupload.css" type="text/css"/>
+<script type="text/javascript" src="moxie.js"></script>
+<script type="text/javascript" src="plupload.dev.js"></script>
+<script type="text/javascript" src="i18n/zh_CN.js"></script>
+<script type="text/javascript" src="jquery.ui.plupload/jquery.ui.plupload.js"></script>
+
+</head>
+<body>
+
+
+<div id="div_uploader"></div>
+
+<script type="text/javascript">
+
+$("#div_uploader").plupload({
+	url : 'http://127.0.0.1/member/uploadFile',
+	runtimes : 'html4',
+	
+	resize : {width : 320, height : 240, quality : 90},
+	
+	filters : {
+		mime_types: [
+			{title : "Image files", extensions : "jpg,gif,png"}
+		]
+	}
+});
+
+
+</script>
+
+
+</body>
+</html>

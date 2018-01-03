@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ext上传demo</title>
+
+
+<link rel="stylesheet" href="ext/css/plupload-ext.css" type="text/css"/>
+
+<script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+<script type="text/javascript" src="moxie.js"></script>
+<script type="text/javascript" src="plupload.dev.js"></script>
+<script type="text/javascript" src="i18n/zh_CN.js"></script>
+<script type="text/javascript" src="ext/plupload-ext.js"></script>
+
+</head>
+<body>
+
+
+<div id="div_uploader"></div>
+<div id="div_up"></div>
+
+<script type="text/javascript">
+
+var ss = $("#div_uploader").pluploadTW({
+	field: 'url',
+	filesStr: 'http://jdzhl.img-cn-beijing.aliyuncs.com/mall/user/ff808081540e507b01540eed3cbe0005/4bd66b4248de47cf90213cf0a81a0b92.jpg',
+	up_num: 5,	//上传数量控制
+	
+	url : '/member/uploadFile',
+	
+	//resize : {width : 320, height : 240, quality : 90},
+	
+	filters : {
+		mime_types: [
+			{title : "Image files", extensions : "jpg,gif,png,bmp"},
+			{title : "Zip files", extensions : "zip"},
+			{title : "ISO files", extensions : "iso"},
+		]
+	}
+});
+
+var aa = $("#div_up").pluploadTW({
+	field: 'url1',
+	filesStr: 'http://jdzhl.img-cn-beijing.aliyuncs.com/mall/user/ff808081540e507b01540eed3cbe0005/4bd66b4248de47cf90213cf0a81a0b92.jpg',
+	up_num: 5,	//上传数量控制
+	
+	url : '/member/uploadFile',
+	
+	//resize : {width : 320, height : 240, quality : 90},
+	
+	filters : {
+		mime_types: [
+			{title : "Image files", extensions : "jpg,gif,png,bmp"},
+			{title : "Zip files", extensions : "zip"},
+			{title : "ISO files", extensions : "iso"},
+		]
+	}
+});
+
+
+</script>
+
+
+</body>
+</html>
