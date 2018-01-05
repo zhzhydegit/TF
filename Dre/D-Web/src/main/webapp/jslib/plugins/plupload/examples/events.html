@@ -62,7 +62,7 @@
                 log('[UploadFile]', file);
  
                 // You can override settings before the file is uploaded
-                // up.setOption('url', 'Upload.php?id=' + file.id);
+                // up.setOption('url', 'upload.php?id=' + file.id);
                 // up.setOption('multipart_params', {param1 : 'value1', param2 : 'value2'});
             }
         },
@@ -105,7 +105,7 @@
 			},
 
 			BeforeUpload: function(up, file) {
-				// Called right before the Upload for a given file starts, can be used to cancel it if required
+				// Called right before the upload for a given file starts, can be used to cancel it if required
 				log('[BeforeUpload]', 'File: ', file);
 			},
  

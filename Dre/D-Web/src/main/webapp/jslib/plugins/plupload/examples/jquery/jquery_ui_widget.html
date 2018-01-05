@@ -44,7 +44,7 @@ $(function() {
 		runtimes : 'html5,flash,silverlight,html4',
 		url : '../upload.php',
 
-		// User can Upload no more then 20 files in one go (sets multiple_queues to false)
+		// User can upload no more then 20 files in one go (sets multiple_queues to false)
 		max_file_count: 20,
 		
 		chunk_size: '1mb',
@@ -93,7 +93,7 @@ $(function() {
 
 	// Handle the case when form was submitted before uploading has finished
 	$('#form').submit(function(e) {
-		// Files in queue Upload them first
+		// Files in queue upload them first
 		if ($('#uploader').plupload('getFiles').length > 0) {
 
 			// When all files are uploaded submit form

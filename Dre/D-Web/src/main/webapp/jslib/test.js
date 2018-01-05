@@ -6,7 +6,15 @@ require(['tfExt','pluploadTF'],function () {
         });
 
         $("#pl_upload").pluploadTF({
-
+            field : 'enen',
+            filesStr: 'en',
+            up_num: 1,
+            url : tf.contextPath + '/upload',
+            filters : {
+                mime_types: [
+                    {title : "Image files", extensions : "pdf,docx,txt"}
+                ]
+            }
         })
 
 

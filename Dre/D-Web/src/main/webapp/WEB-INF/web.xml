@@ -64,6 +64,10 @@
     <servlet-name>default</servlet-name>
     <url-pattern>*.css</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.png</url-pattern>
+  </servlet-mapping>
 
   <!--上传路径-->
   <servlet>
@@ -74,6 +78,10 @@
     <servlet-name>upload</servlet-name>
     <url-pattern>/upload</url-pattern>
   </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>test/test</welcome-file>
+  </welcome-file-list>
 
 
 
